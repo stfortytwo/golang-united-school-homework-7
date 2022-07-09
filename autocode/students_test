@@ -45,7 +45,7 @@ var (
 	testPeople = People{testPersonA1, testPersonA2, testPersonB1, testPersonB2}
 )
 
-func TestPeople_Len(t *testing.T) {
+func TestPeopleLen(t *testing.T) {
 	var testLenData = map[string]struct {
 		people      People
 		expectedLen int
@@ -64,7 +64,7 @@ func TestPeople_Len(t *testing.T) {
 	}
 }
 
-func TestPeople_Less(t *testing.T) {
+func TestPeopleLess(t *testing.T) {
 	var testLessData = map[string]struct {
 		i        int
 		j        int
@@ -88,7 +88,7 @@ func TestPeople_Less(t *testing.T) {
 	}
 }
 
-func TestPeople_Swap(t *testing.T) {
+func TestPeopleSwap(t *testing.T) {
 	testSwapPeople := make(People, 0)
 	testSwapPeople = append(testSwapPeople, testPeople...)
 	testSwapPeople.Swap(0, 3)
@@ -115,7 +115,7 @@ func TestNew(t *testing.T) {
 	}
 }
 
-func TestMatrix_Cols(t *testing.T) {
+func TestMatrixCols(t *testing.T) {
 	var testData = map[string]struct {
 		input    Matrix
 		expected [][]int
@@ -135,7 +135,7 @@ func TestMatrix_Cols(t *testing.T) {
 	}
 }
 
-func TestMatrix_Rows(t *testing.T) {
+func TestMatrixRows(t *testing.T) {
 	var testData = map[string]struct {
 		input    Matrix
 		expected [][]int
@@ -155,7 +155,7 @@ func TestMatrix_Rows(t *testing.T) {
 	}
 }
 
-func TestMatrix_Set(t *testing.T) {
+func TestMatrixSet(t *testing.T) {
 	m := Matrix{rows: 3, cols: 4, data: []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}}
 	var testData = map[string]struct {
 		row int
