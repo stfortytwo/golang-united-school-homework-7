@@ -113,6 +113,9 @@ func TestNew(t *testing.T) {
 	if _, err := New("a"); err == nil {
 		t.Errorf("didn't get expected string to int conversion error")
 	}
+	if _, err := New("0 1 2\n 3"); err == nil {
+		t.Errorf("didn't get expected wrong column row error")
+	}
 }
 
 func TestMatrixCols(t *testing.T) {
